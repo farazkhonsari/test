@@ -7,7 +7,7 @@ AppClient.random = function(){
 
 if(typeof window.addEventListener == "function") {
   window.addEventListener("message", function(event){
-    console.log("Hello World2"+event);
+    console.log("Hello World33"+event);
   }, false);
 }
 
@@ -15,7 +15,8 @@ if(typeof window.addEventListener == "function") {
 // set app loaded trigger, so we can inform the frame platform when ready
 ////////////////////////////////////////////////////////////////////////////////
 function setReadyTrigger(){
-  console.log("Hello World2");
+  console.log("Hello World3");
+  androidApp.appDone();
   if(!AppClientConnection || AppClientConnection.client.registered != true) {
     setTimeout(setReadyTrigger,100);
     return;
